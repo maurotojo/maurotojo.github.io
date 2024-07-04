@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>DASS-21</title>
+<style>
+    body {font-family: Arial, sans-serif;}
+    .question {margin-bottom: 20px;}
+    .question label {margin-right: 20px;}
+</style>
+<script>
+    function calculateScores() {
+        var depressionScores = [3, 5, 10, 13, 16, 17, 21];
+        var anxietyScores = [2, 4, 7, 9, 15, 19, 20];
+        var stressScores = [1, 6, 8, 11, 12, 14, 18];
+        var depressionTotal = 0, anxietyTotal = 0, stressTotal = 0;
+
+        depressionScores.forEach(function(question) {
+            var value = parseInt(document.querySelector('input[name="question' + question + '"]:checked').value);
+            depressionTotal += value;
+        });
+        anxietyScores.forEach(function(question) {
+            var value = parseInt(document.querySelector('input[name="question' + question + '"]:checked').value);
+            anxietyTotal += value;
+        });
+        stressScores.forEach(function(question) {
+            var value = parseInt(document.querySelector('input[name="question' + question + '"]:checked').value);
+            stressTotal += value;
+        });
+
+        depressionTotal *= 2;
+        anxietyTotal *= 2;
+        stressTotal *= 2;
+
+        document.getElementById('depressionScore').innerText = 'Pontuação de Depressão: ' + depressionTotal;
+        document.getElementById('anxietyScore').innerText = 'Pontuação de Ansiedade: ' + anxietyTotal;
+        document.getElementById('stressScore').innerText = 'Pontuação de Estresse: ' + stressTotal;
+    }
+</script>
+</head>
+<body>
+<h1>ESCALA DE DEPRESSÃO, ANSIEDADE E ESTRESSE (DASS – 21)</h1>
+<p>Por favor, selecione a opção que melhor descreve o quanto cada afirmação aplicou a você na última semana.</p>
+
+<!-- Questions with radio buttons -->
+<form id="dass21Form">
+    <div class="question">
+        <p>1. Achei difícil me acalmar</p>
+        <label><input type="radio" name="question1" value="0" required> 0</label>
+        <label><input type="radio" name="question1" value="1"> 1</label>
+        <label><input type="radio" name="question1" value="2"> 2</label>
+        <label><input type="radio" name="question1" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>2. Senti minha boca seca</p>
+        <label><input type="radio" name="question2" value="0" required> 0</label>
+        <label><input type="radio" name="question2" value="1"> 1</label>
+        <label><input type="radio" name="question2" value="2"> 2</label>
+        <label><input type="radio" name="question2" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>3. Não consegui vivenciar nenhum sentimento positivo</p>
+        <label><input type="radio" name="question3" value="0" required> 0</label>
+        <label><input type="radio" name="question3" value="1"> 1</label>
+        <label><input type="radio" name="question3" value="2"> 2</label>
+        <label><input type="radio" name="question3" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>4. Tive dificuldade em respirar em alguns momentos (ex. respiração ofegante, falta de ar, sem ter feito nenhum esforço físico)</p>
+        <label><input type="radio" name="question4" value="0" required> 0</label>
+        <label><input type="radio" name="question4" value="1"> 1</label>
+        <label><input type="radio" name="question4" value="2"> 2</label>
+        <label><input type="radio" name="question4" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>5. Achei difícil ter iniciativa para fazer as coisas</p>
+        <label><input type="radio" name="question5" value="0" required> 0</label>
+        <label><input type="radio" name="question5" value="1"> 1</label>
+        <label><input type="radio" name="question5" value="2"> 2</label>
+        <label><input type="radio" name="question5" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>6. Tive a tendência de reagir de forma exagerada às situações</p>
+        <label><input type="radio" name="question6" value="0" required> 0</label>
+        <label><input type="radio" name="question6" value="1"> 1</label>
+        <label><input type="radio" name="question6" value="2"> 2</label>
+        <label><input type="radio" name="question6" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>7. Senti tremores (ex. nas mãos)</p>
+        <label><input type="radio" name="question7" value="0" required> 0</label>
+        <label><input type="radio" name="question7" value="1"> 1</label>
+        <label><input type="radio" name="question7" value="2"> 2</label>
+        <label><input type="radio" name="question7" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>8. Senti que estava sempre nervoso</p>
+        <label><input type="radio" name="question8" value="0" required> 0</label>
+        <label><input type="radio" name="question8" value="1"> 1</label>
+        <label><input type="radio" name="question8" value="2"> 2</label>
+        <label><input type="radio" name="question8" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>9. Preocupei-me com situações em que eu pudesse entrar em pânico e parecesse ridículo(a)</p>
+        <label><input type="radio" name="question9" value="0" required> 0</label>
+        <label><input type="radio" name="question9" value="1"> 1</label>
+        <label><input type="radio" name="question9" value="2"> 2</label>
+        <label><input type="radio" name="question9" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>10. Senti que não tinha nada a desejar</p>
+        <label><input type="radio" name="question10" value="0" required> 0</label>
+        <label><input type="radio" name="question10" value="1"> 1</label>
+        <label><input type="radio" name="question10" value="2"> 2</label>
+        <label><input type="radio" name="question10" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>11. Senti-me agitado</p>
+        <label><input type="radio" name="question11" value="0" required> 0</label>
+        <label><input type="radio" name="question11" value="1"> 1</label>
+        <label><input type="radio" name="question11" value="2"> 2</label>
+        <label><input type="radio" name="question11" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>12. Achei difícil relaxar</p>
+        <label><input type="radio" name="question12" value="0" required> 0</label>
+        <label><input type="radio" name="question12" value="1"> 1</label>
+        <label><input type="radio" name="question12" value="2"> 2</label>
+        <label><input type="radio" name="question12" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>13. Senti-me depressivo(a) e sem ânimo</p>
+        <label><input type="radio" name="question13" value="0" required> 0</label>
+        <label><input type="radio" name="question13" value="1"> 1</label>
+        <label><input type="radio" name="question13" value="2"> 2</label>
+        <label><input type="radio" name="question13" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>14. Fui intolerante com as coisas que me impediam de continuar o que eu estava fazendo</p>
+        <label><input type="radio" name="question14" value="0" required> 0</label>
+        <label><input type="radio" name="question14" value="1"> 1</label>
+        <label><input type="radio" name="question14" value="2"> 2</label>
+        <label><input type="radio" name="question14" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>15. Senti que ia entrar em pânico</p>
+        <label><input type="radio" name="question15" value="0" required> 0</label>
+        <label><input type="radio" name="question15" value="1"> 1</label>
+        <label><input type="radio" name="question15" value="2"> 2</label>
+        <label><input type="radio" name="question15" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>16. Não consegui me entusiasmar com nada</p>
+        <label><input type="radio" name="question16" value="0" required> 0</label>
+        <label><input type="radio" name="question16" value="1"> 1</label>
+        <label><input type="radio" name="question16" value="2"> 2</label>
+        <label><input type="radio" name="question16" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>17. Senti que não tinha valor como pessoa</p>
+        <label><input type="radio" name="question17" value="0" required> 0</label>
+        <label><input type="radio" name="question17" value="1"> 1</label>
+        <label><input type="radio" name="question17" value="2"> 2</label>
+        <label><input type="radio" name="question17" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>18. Senti que estava um pouco emotivo/sensível demais</p>
+        <label><input type="radio" name="question18" value="0" required> 0</label>
+        <label><input type="radio" name="question18" value="1"> 1</label>
+        <label><input type="radio" name="question18" value="2"> 2</label>
+        <label><input type="radio" name="question18" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>19. Sabia que meu coração estava alterado mesmo não tendo feito nenhum esforço físico (ex. aumento da frequência cardíaca, disritmia cardíaca)</p>
+        <label><input type="radio" name="question19" value="0" required> 0</label>
+        <label><input type="radio" name="question19" value="1"> 1</label>
+        <label><input type="radio" name="question19" value="2"> 2</label>
+        <label><input type="radio" name="question19" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>20. Senti medo sem motivo</p>
+        <label><input type="radio" name="question20" value="0" required> 0</label>
+        <label><input type="radio" name="question20" value="1"> 1</label>
+        <label><input type="radio" name="question20" value="2"> 2</label>
+        <label><input type="radio" name="question20" value="3"> 3</label>
+    </div>
+    <div class="question">
+        <p>21. Senti que a vida não tinha sentido</p>
+        <label><input type="radio" name="question21" value="0" required> 0</label>
+        <label><input type="radio" name="question21" value="1"> 1</label>
+        <label><input type="radio" name="question21" value="2"> 2</label>
+        <label><input type="radio" name="question21" value="3"> 3</label>
+    </div>
+    <button type="button" onclick="calculateScores()">Calcular Pontuações</button>
+</form>
+
+<!-- Result display -->
+<p id="depressionScore"></p>
+<p id="anxietyScore"></p>
+<p id="stressScore"></p>
+</body>
+</html>
