@@ -6,10 +6,17 @@
 </head>
 <body>
 <h1>Questionário DASS-21</h1>
+
+Por favor, leia cuidadosamente cada uma das afirmações abaixo e circule o número apropriado 0, 1, 2 ou 3 que indique o quanto ela se aplicou a você 
+durante a última semana, conforme a indicação a seguir:<br><br>
+0 Não se aplicou de maneira alguma<br>
+1 Aplicou-se em algum grau, ou por pouco de tempo<br>
+2 Aplicou-se em um grau considerável, ou por uma boa parte do tempo<br>
+3 Aplicou-se muito, ou na maioria do tempo<br><br>
 <form id="dassForm">
     <!-- Subescala de Depressão -->
     <fieldset>
-        <legend>Depressão</legend>
+        <!-- <legend>Depressão</legend> -->
         <label for="q3">Não consegui vivenciar nenhum sentimento positivo:</label>
         <select name="depressao" id="q3">
             <option value="0">0</option>
@@ -65,11 +72,11 @@
             <option value="2">2</option>
             <option value="3">3</option>
         </select><br>
-    </fieldset>
+
 
     <!-- Subescala de Ansiedade -->
-    <fieldset>
-        <legend>Ansiedade</legend>
+   
+        <!--<legend>Ansiedade</legend> -->
         <label for="q2">Senti minha boca seca:</label>
         <select name="ansiedade" id="q2">
             <option value="0">0</option>
@@ -125,11 +132,11 @@
             <option value="2">2</option>
             <option value="3">3</option>
         </select><br>
-    </fieldset>
+    
 
     <!-- Subescala de Estresse -->
-    <fieldset>
-        <legend>Estresse</legend>
+  
+        <!-- <legend>Estresse</legend> -->
         <label for="q1">Achei difícil me acalmar:</label>
         <select name="estresse" id="q1">
             <option value="0">0</option>
@@ -187,9 +194,9 @@
         </select><br>
     </fieldset>
 
-    <button type="button" onclick="calcularScores()">Calcular Scores</button>
+    <button type="button" onclick="calcularScores()">Calcular Pontuação</button>
 </form>
-
+<br>
 <div id="resultados"></div>
 
 <script>
@@ -233,6 +240,39 @@ function calcularScores() {
     document.getElementById('resultados').innerHTML = `Score de Depressão: ${depressao}, Ansiedade: ${ansiedade}, Estresse: ${estresse}`;
 }
 </script>
+
+<p>Classifica&ccedil;&atilde;o:</p>
+<ul>
+<li>&nbsp;Depress&atilde;o:
+<ul>
+<li>Normal: 0-9</li>
+<li>Leve: 10-13</li>
+<li>Moderado: 14-20</li>
+<li>Severo: 21-27</li>
+<li>Extremamente Severo: 28-42</li>
+</ul>
+</li>
+<li>Ansiedade:
+<ul>
+<li>Normal: 0-7</li>
+<li>Leve: 8-9</li>
+<li>Moderado: 10-14</li>
+<li>Severo: 15-19</li>
+<li>Extremamente Severo: 20-42</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Estresse:
+<ul>
+<li>Normal: 0-14</li>
+<li>Leve: 15-18</li>
+<li>Moderado: 19-25</li>
+<li>Severo: 26-33</li>
+<li>Extremamente Severo: 34-42</li>
+</ul>
+</li>
+</ul>
 
 </body>
 </html>
