@@ -10,7 +10,7 @@ tags:
 
 # Burnout: Compreendendo as Dimensões do Esgotamento Profissional
 
-Olá, sou Dr. [Seu Nome], médico do trabalho, e hoje quero falar sobre um tema crucial que afeta muitos profissionais: o burnout. O esgotamento profissional, ou burnout, é um estado de exaustão física, emocional e mental causado por um período prolongado de estresse no trabalho. Vamos explorar as dimensões desse fenômeno para entender melhor como ele se manifesta e como podemos lidar com ele.
+Como médico do trabalho, hoje quero falar sobre um tema crucial que afeta muitos profissionais: o burnout. O esgotamento profissional, ou burnout, é um estado de exaustão física, emocional e mental causado por um período prolongado de estresse no trabalho. Vamos explorar as dimensões desse fenômeno para entender melhor como ele se manifesta e como podemos lidar com ele.
 
 ## Dimensões do Burnout
 
