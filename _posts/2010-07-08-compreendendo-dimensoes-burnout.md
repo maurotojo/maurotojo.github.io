@@ -72,7 +72,7 @@ Espero que este post tenha ajudado a esclarecer as complexidades do burnout. At�
 - [Kabat-Zinn, J. (2003). Mindfulness-based interventions in context: Past, present, and future. *Clinical Psychology: Science and Practice*, 10(2), 144-156.](https://doi.org/10.1093/clipsy.bpg016)
 - [Awa, W. L., Plaumann, M., & Walter, U. (2010). Burnout prevention: A review of intervention programs. *Patient Education and Counseling*, 78(2), 184-190.](https://doi.org/10.1016/j.pec.2009.04.008)
 
-Este texto oferece uma visão abrangente das dimensões, prevenção e tratamento do burnout, fundamentada em literatura científica. Implementar estratégias adequadas pode reduzir significativamente a prevalência dessa síndrome no ambiente de trabalho.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzYyOTQ3NTFdfQ==
+eyJoaXN0b3J5IjpbMzMzNTY2NzQsLTEzNzYyOTQ3NTFdfQ==
 -->
