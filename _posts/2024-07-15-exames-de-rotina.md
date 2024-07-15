@@ -2,7 +2,7 @@
 Você sabe o que são os exames de rastreamento?
 Estes exames, chamados também de exames de rotina, _screening_, ou checkup, fazem parte da prevenção de doenças, uma das bases da medicina moderna.
 
-Esses exames permitem a detecção precoce de condições que podem ser tratadas de forma mais eficaz quando diagnosticadas no início, ou mesmo condições precursoras que, se não tratadas, podem se tornar um problema de saúde crônico futuramente.
+Esses exames permitem a detecção precoce de condições que podem ser tratadas de forma mais eficaz quando diagnosticadas no início, ou mesmo condições precursoras que, se não tratadas, podem se tornar um problema de saúde crônico futuramente. _Em Medicina, sempre é melhor prevenir que remediar_. 
  
 Vou abordar alguns dos exames mais comuns e importantes, suas indicações por faixa etária e a fundamentação científica que respalda essas recomendações.
 
@@ -41,5 +41,5 @@ O exame de glicemia em jejum é crucial para a detecção do diabetes e pré-dia
 - **Referências Científicas:** O rastreamento regular pode reduzir a mortalidade por câncer por meio da detecção precoce e remoção de lesões pré-cancerosas. (USPSTF, 2018, *JAMA*).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MDgxNjQzNl19
+eyJoaXN0b3J5IjpbLTYwNjY4MzQ1OSwtOTkwODE2NDM2XX0=
 -->
