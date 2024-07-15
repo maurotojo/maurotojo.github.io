@@ -40,9 +40,10 @@ O exame de glicemia em jejum é crucial para a detecção do diabetes e pré-dia
 
 - **Referências Científicas:** O rastreamento regular pode reduzir a mortalidade por câncer por meio da detecção precoce e remoção de lesões pré-cancerosas. (USPSTF, 2018, *JAMA*).
 
-Estes são alguns exemplos de exames de rotina. A periodicidade e os tipos de exames pedidos variam para cada pessoa, e dependem de seu histórico médico pessoal e familiar. Por isso requerem uma cosu
+Estes são alguns exemplos de exames de rotina. A periodicidade e os tipos de exames pedidos variam para cada pessoa, e dependem de seu histórico médico pessoal e familiar. Por isso requerem uma consulta médica prévia, para esta avaliação do que o médico pede para cada paciente.
+Não deixe de fazer seus exames de rotina! Agenda uma consulta se você não os tem realizado ou mesmo se tiver dúvida se há algum exame para fazer ou não.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY2ODA3NDQzLC02MDY2ODM0NTksLTk5MD
-gxNjQzNl19
+eyJoaXN0b3J5IjpbLTEwMjQ0OTIyNywtNjA2NjgzNDU5LC05OT
+A4MTY0MzZdfQ==
 -->
