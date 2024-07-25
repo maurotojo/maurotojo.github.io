@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHQ-9</title>
+    <style>
+        .result { display: none; margin-top: 20px; }
+        .description { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Questionário de Saúde do Paciente (PHQ-9)</h1>
+    <form id="phq9">
+        <p>Nos últimos 14 dias, com que frequência você tem sido incomodado pelos seguintes problemas?</p>
+        <ol>
+            <li>
+                <label>1. Pouco interesse ou prazer em fazer as coisas
+                    <select name="q1">
+                        <option value="0">Nenhuma vez</option>
+                        <option value="1">Vários dias</option>
+                        <option value="2">Mais da metade dos dias</option>
+                        <option value="3">Quase todos os dias</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label>2. Sentir-se para baixo, deprimido ou sem esperanças
+                    <select name="q2">
+                        <option value="0">Nenhuma vez</option>
+                        <option value="1">Vários dias</option>
+                        <option value="2">Mais da metade dos dias</option>
+                        <option value="3">Quase todos os dias</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label>3. Dificuldade para adormecer, dormir ou dormir demais
+                    <select name="q3">
+                        <option value="0">Nenhuma vez</option>
+                        <option value="1">Vários dias</option>
+                        <option value="2">Mais da metade dos dias</option>
+                        <option value="3">Quase todos os dias</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label>4. Sentir-se cansado ou com pouca energia
+                    <select name="q4">
+                        <option value="0">Nenhuma vez</option>
+                        <option value="1">Vários dias</option>
+                        <option value="2">Mais da metade dos dias</option>
+                        <option value="3">Quase todos os dias</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label>5. Falta de apetite ou comer demais
+                    <select name="q5">
+                        <option value="0">Nenhuma vez</option>
+                        <option value="1">Vários dias</option>
+                        <option value="2">Mais da metade dos dias</option>
+                        <option value="3">Quase todos os dias</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label>6. Sentir-se mal consigo mesmo - ou que você é um fracasso ou que decepcionou a si mesmo ou sua família
+                    <select name="q6">
+                        <option value="0">Nenhuma vez</option>
+                        <option value="1">Vários dias</option>
+                        <option value="2">Mais da metade dos dias</option>
+                        <option value="3">Quase todos os dias</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label>7. Problemas para se concentrar nas coisas, como ler o jornal ou ver televisão
+                    <select name="q7">
+                        <option value="0">Nenhuma vez</option>
+                        <option value="1">Vários dias</option>
+                        <option value="2">Mais da metade dos dias</option>
+                        <option value="3">Quase todos os dias</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label>8. Movimentar-se ou falar tão devagar que as outras pessoas poderiam ter notado? Ou, o oposto - estar tão agitado ou inquieto que você tem se movido muito mais do que o habitual
+                    <select name="q8">
+                        <option value="0">Nenhuma vez</option>
+                        <option value="1">Vários dias</option>
+                        <option value="2">Mais da metade dos dias</option>
+                        <option value="3">Quase todos os dias</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label>9. Pensamentos de que seria melhor estar morto ou de se machucar de alguma forma
+                    <select name="q9">
+                        <option value="0">Nenhuma vez</option>
+                        <option value="1">Vários dias</option>
+                        <option value="2">Mais da metade dos dias</option>
+                        <option value="3">Quase todos os dias</option>
+                    </select>
+                </label>
+            </li>
+        </ol>
+        <button type="button" onclick="calculateResult()">Enviar</button>
+    </form>
+
+    <div class="result" id="result">
+        <h2>Resultados</h2>
+        <p><strong>Total de Pontos:</strong> <span id="totalScore"></span></p>
+        <div class="description" id="description"></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            let totalScore = 0;
+            let descriptions = [
+                "Pouco interesse ou prazer em fazer as coisas pode indicar anedonia, um sintoma comum de depressão.",
+                "Sentir-se para baixo, deprimido ou sem esperanças é um indicador-chave de um transtorno depressivo.",
+                "Dificuldade para dormir ou dormir demais pode ser um sinal de desregulação do humor.",
+                "Sentir-se cansado ou com pouca energia frequentemente está associado à depressão.",
+                "Alterações no apetite, como falta de apetite ou comer demais, podem indicar um transtorno depressivo.",
+                "Sentimentos de culpa ou de ser um fracasso são comuns em indivíduos com depressão.",
+                "Problemas de concentração podem ser um sintoma de vários transtornos de humor.",
+                "Movimentação lenta ou agitação podem ser sinais físicos de depressão.",
+                "Pensamentos de autolesão ou de morte são indicadores de depressão grave e necessitam de atenção imediata."
+            ];
+
+            for (let i = 1; i <= 9; i++) {
+                let question = document.querySelector(`select[name="q${i}"]`);
+                totalScore += parseInt(question.value);
+            }
+
+            document.getElementById("totalScore").innerText = totalScore;
+            let description = "";
+            for (let i = 0; i < descriptions.length; i++) {
+                description += `<p>${i+1}. ${descriptions[i]}</p>`;
+            }
+            document.getElementById("description").innerHTML = description;
+
+            document.getElementById("result").style.display = "block";
+        }
+    </script>
+</body>
+</html>
