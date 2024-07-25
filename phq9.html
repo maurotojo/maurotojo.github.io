@@ -111,6 +111,7 @@
     <div class="result" id="result">
         <h2>Resultados</h2>
         <p><strong>Total de Pontos:</strong> <span id="totalScore"></span></p>
+        <p><strong>Classificação:</strong> <span id="classification"></span></p>
         <div class="description" id="description"></div>
     </div>
 
@@ -135,6 +136,22 @@
             }
 
             document.getElementById("totalScore").innerText = totalScore;
+
+            let classification = "";
+            if (totalScore >= 0 && totalScore <= 4) {
+                classification = "Sem depressão";
+            } else if (totalScore >= 5 && totalScore <= 9) {
+                classification = "Transtorno depressivo leve";
+            } else if (totalScore >= 10 && totalScore <= 14) {
+                classification = "Transtorno depressivo moderado";
+            } else if (totalScore >= 15 && totalScore <= 19) {
+                classification = "Transtorno depressivo moderadamente grave";
+            } else if (totalScore >= 20 && totalScore <= 27) {
+                classification = "Transtorno depressivo grave";
+            }
+
+            document.getElementById("classification").innerText = classification;
+
             let description = "";
             for (let i = 0; i < descriptions.length; i++) {
                 description += `<p>${i+1}. ${descriptions[i]}</p>`;
