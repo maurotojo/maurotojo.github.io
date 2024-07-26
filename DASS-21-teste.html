@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<!-- 
+
+
+<!DOCTYPE html> -->
 <html lang="pt">
     <head>
         <meta charset="UTF-8">
@@ -11,23 +14,13 @@
             h1 {
                 font-size: 24px;
             }
-            
-            form {
-            max-width: 600px;
-            margin: auto;
-            padding: 10px;
-            border: 1px solid #fff;
-            border-radius: 15px;
-            background-color: #f9f9f9;
-        }
-
 
             label,
             p,
             ul,
             button,
             select {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             #resultados {
@@ -35,47 +28,34 @@
                 font-weight: bold;
             }
 
-            @media (max-width: 600px) {
-                h1 {
-                    font-size: 28px;
-                }
+            form {
+                max-width: 800px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                background-color: #f9f9f9;
+            }
+            }
 
-                label,
-                p,
-                ul,
-                button,
-                select {
-                    font-size: 22px;
-                }
-
-                #resultados {
-                    font-size: 26px;
-                }
+            fieldset {
+                font-size: 18px;
+                border: 0px solid #ccc;
             }
         </style>
     </head>
     <body>
-        <h1>Questionário DASS-21</h1>
-        Dr. Mauro Kioshi Tenorio Tojo - Médico de Família e Comunidade
-        <br>
+        <h1>Questionário DASS-21</h1> Dr. Mauro Kioshi Tenorio Tojo - Médico de Família e Comunidade <br>
         <a href="https://drmaurotojo.com.br" target="blank">Website</a> / <a href="https://instagram.com/maurotojo" target="blank">Instagram</a>
         <br>
-        <br>
-        Por favor, leia cuidadosamente cada uma das afirmações abaixo e escolha o número apropriado 0, 1, 2 ou 3 que indique o quanto ela se aplicou a você durante a última semana, conforme a indicação a seguir:
-        <br>
-        <br>
-        0 Não se aplicou de maneira alguma
-        <br>
-        1 Aplicou-se em algum grau, ou por pouco de tempo
-        <br>
-        2 Aplicou-se em um grau considerável, ou por uma boa parte do tempo
-        <br>
-        3 Aplicou-se muito, ou na maioria do tempo
-        <br>
+        <br> Por favor, leia cuidadosamente cada uma das afirmações abaixo e escolha o número apropriado 0, 1, 2 ou 3 que indique o quanto ela se aplicou a você durante a última semana, conforme a indicação a seguir: <br>
+        <br> 0 Não se aplicou de maneira alguma <br> 1 Aplicou-se em algum grau, ou por pouco de tempo <br> 2 Aplicou-se em um grau considerável, ou por uma boa parte do tempo <br> 3 Aplicou-se muito, ou na maioria do tempo <br>
         <br>
         <form id="dassForm">
             <!-- Subescala de Depressão -->
-           <fieldset>
+            
+            
+                
                 <!-- <legend>Depressão</legend> -->
                 <label for="q3">Não consegui vivenciar nenhum sentimento positivo:</label>
                 <select name="depressao" id="q3">
@@ -220,7 +200,7 @@
                 <label for="q11">Senti-me agitado:</label>
                 <select name="estresse" id="q11">
                     <option value="0">0</option>
-					<option value="1">1</option>
+                    <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
@@ -249,7 +229,7 @@
                     <option value="3">3</option>
                 </select>
                 <br>
-            </fieldset>
+          
             <button type="button" onclick="calcularScores()">Calcular Pontuação</button>
         </form>
         <br>
@@ -292,10 +272,9 @@
                 document.getElementById('resultados').innerHTML = `Score de Depressão: ${depressao}, Ansiedade: ${ansiedade}, Estresse: ${estresse}`;
             }
         </script>
-        <p>Classificação:</p>
+        <p>Classifica&ccedil;&atilde;o:</p>
         <ul>
-            <li>Depressão:
-                <ul>
+            <li>&nbsp;Depress&atilde;o: <ul>
                     <li>Normal: 0-9</li>
                     <li>Leve: 10-12</li>
                     <li>Moderado: 13-20</li>
@@ -303,8 +282,7 @@
                     <li>Extremamente Severo: 28-42</li>
                 </ul>
             </li>
-            <li>Ansiedade:
-                <ul>
+            <li>Ansiedade: <ul>
                     <li>Normal: 0-6</li>
                     <li>Leve: 7-9</li>
                     <li>Moderado: 10-14</li>
@@ -314,8 +292,7 @@
             </li>
         </ul>
         <ul>
-            <li>Estresse:
-                <ul>
+            <li>Estresse: <ul>
                     <li>Normal: 0-10</li>
                     <li>Leve: 11-18</li>
                     <li>Moderado: 19-26</li>
