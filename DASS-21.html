@@ -1,9 +1,11 @@
 <!-- 
 
+
 <!DOCTYPE html> -->
 <html lang="pt">
     <head>
         <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Questionário de ansiedade, depressão e estresse DASS-21</title>
         <style>
             body {
@@ -19,12 +21,27 @@
             ul,
             button,
             select {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             #resultados {
                 font-size: 22px;
                 font-weight: bold;
+            }
+
+            form {
+                max-width: 800px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                background-color: #f9f9f9;
+            }
+            }
+
+            fieldset {
+                font-size: 18px;
+                border: 0px solid #ccc;
             }
         </style>
     </head>
@@ -37,7 +54,9 @@
         <br>
         <form id="dassForm">
             <!-- Subescala de Depressão -->
-            <fieldset>
+            
+            
+                
                 <!-- <legend>Depressão</legend> -->
                 <label for="q3">Não consegui vivenciar nenhum sentimento positivo:</label>
                 <select name="depressao" id="q3">
@@ -182,7 +201,7 @@
                 <label for="q11">Senti-me agitado:</label>
                 <select name="estresse" id="q11">
                     <option value="0">0</option>
-					<option value="1">1</option>
+                    <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
@@ -211,7 +230,7 @@
                     <option value="3">3</option>
                 </select>
                 <br>
-            </fieldset>
+          
             <button type="button" onclick="calcularScores()">Calcular Pontuação</button>
         </form>
         <br>
