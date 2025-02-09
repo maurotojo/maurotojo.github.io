@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário IF‑BrA – Avaliação de Funcionalidade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.5;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    legend {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .activity {
+      margin-bottom: 15px;
+    }
+    .activity p {
+      margin: 0 0 5px 0;
+    }
+    .option {
+      margin-left: 20px;
+    }
+    .result {
+      font-weight: bold;
+      background: #eef;
+      border: 1px solid #999;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Índice de Funcionalidade Brasileiro Aplicado para Fins de Classificação e Concessão da Aposentadoria da Pessoa com Deficiência (IF‑BrA)</h1>
+  <p>Preencha a avaliação para cada atividade. Selecione a opção que melhor descreve o desempenho do paciente em seu ambiente habitual.</p>
+  
+  <!-- OBSERVAÇÃO:
+       Este formulário contempla 41 atividades distribuídas em 7 domínios. 
+       Para fins de exemplo, abaixo estão listadas todas as atividades com descrições detalhadas e
+       as opções padrão definidas como "100" (checked). -->
+       
+  <form id="ifbraForm">
+    <!-- Domínio Sensorial (5 atividades) -->
+    <fieldset>
+      <legend>Domínio Sensorial (5 atividades)</legend>
+      
+      <!-- Atividade 1: Percepção de estímulos visuais -->
+      <div class="activity">
+        <p><strong>Atividade 1: Percepção de estímulos visuais</strong></p>
+        <div class="option">
+          <input type="radio" name="sensorial1" value="100" checked required> 
+          <label>100 pontos – Realiza de forma independente, sem adaptações, na velocidade habitual e com segurança.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial1" value="75"> 
+          <label>75 pontos – Realiza com adaptações/modificações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial1" value="50"> 
+          <label>50 pontos – Realiza com auxílio de terceiros.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial1" value="25"> 
+          <label>25 pontos – Não realiza ou é totalmente dependente de terceiros.</label>
+        </div>
+      </div>
+      
+      <!-- Atividade 2: Percepção de estímulos auditivos -->
+      <div class="activity">
+        <p><strong>Atividade 2: Percepção de estímulos auditivos</strong></p>
+        <div class="option">
+          <input type="radio" name="sensorial2" value="100" checked required> 
+          <label>100 pontos – Compreende os estímulos auditivos de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial2" value="75"> 
+          <label>75 pontos – Compreende com adaptações ou ligeira modificação no ritmo.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial2" value="50"> 
+          <label>50 pontos – Requer auxílio parcial para a compreensão.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial2" value="25"> 
+          <label>25 pontos – Não compreende sem auxílio.</label>
+        </div>
+      </div>
+      
+      <!-- Atividade 3: Percepção de estímulos táteis -->
+      <div class="activity">
+        <p><strong>Atividade 3: Percepção de estímulos táteis</strong></p>
+        <div class="option">
+          <input type="radio" name="sensorial3" value="100" checked required> 
+          <label>100 pontos – Realiza a percepção tátil de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial3" value="75"> 
+          <label>75 pontos – Realiza com adaptações ou com leve redução na sensibilidade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial3" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial3" value="25"> 
+          <label>25 pontos – Não realiza sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <!-- Atividade 4: Percepção de estímulos gustativos/olfativos -->
+      <div class="activity">
+        <p><strong>Atividade 4: Percepção de estímulos gustativos/olfativos</strong></p>
+        <div class="option">
+          <input type="radio" name="sensorial4" value="100" checked required> 
+          <label>100 pontos – Realiza de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial4" value="75"> 
+          <label>75 pontos – Com adaptações ou modificações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial4" value="50"> 
+          <label>50 pontos – Requer auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial4" value="25"> 
+          <label>25 pontos – Não realiza sem total auxílio.</label>
+        </div>
+      </div>
+      
+      <!-- Atividade 5: Integração sensorial -->
+      <div class="activity">
+        <p><strong>Atividade 5: Integração sensorial (coordenação dos sentidos)</strong></p>
+        <div class="option">
+          <input type="radio" name="sensorial5" value="100" checked required> 
+          <label>100 pontos – Integra os estímulos de forma independente e adequada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial5" value="75"> 
+          <label>75 pontos – Integra com adaptações ou de forma modificada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial5" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="sensorial5" value="25"> 
+          <label>25 pontos – Não integra os estímulos sem auxílio total.</label>
+        </div>
+      </div>
+    </fieldset>
+    
+    <!-- Domínio Comunicação (5 atividades) -->
+    <fieldset>
+      <legend>Domínio Comunicação (5 atividades)</legend>
+      
+      <div class="activity">
+        <p><strong>Atividade 1: Comunicação verbal</strong></p>
+        <div class="option">
+          <input type="radio" name="comunicacao1" value="100" checked required> 
+          <label>100 pontos – Comunica-se de forma clara e independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao1" value="75"> 
+          <label>75 pontos – Comunica com adaptações ou forma modificada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao1" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao1" value="25"> 
+          <label>25 pontos – Depende totalmente de terceiros.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 2: Comunicação não-verbal</strong></p>
+        <div class="option">
+          <input type="radio" name="comunicacao2" value="100" checked required> 
+          <label>100 pontos – Expressa e interpreta sinais e gestos de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao2" value="75"> 
+          <label>75 pontos – Com adaptações ou de forma ligeiramente modificada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao2" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao2" value="25"> 
+          <label>25 pontos – Não se comunica sem auxílio.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 3: Expressão facial</strong></p>
+        <div class="option">
+          <input type="radio" name="comunicacao3" value="100" checked required> 
+          <label>100 pontos – Expressa emoções e reações de forma independente e adequada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao3" value="75"> 
+          <label>75 pontos – Expressa com adaptações ou com alguma limitação.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao3" value="50"> 
+          <label>50 pontos – Requer auxílio parcial para expressão facial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao3" value="25"> 
+          <label>25 pontos – Não se expressa sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 4: Compreensão de mensagens</strong></p>
+        <div class="option">
+          <input type="radio" name="comunicacao4" value="100" checked required> 
+          <label>100 pontos – Compreende mensagens de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao4" value="75"> 
+          <label>75 pontos – Compreende com adaptações ou leve dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao4" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao4" value="25"> 
+          <label>25 pontos – Não compreende sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 5: Uso de instrumentos de comunicação (telefone, computador)</strong></p>
+        <div class="option">
+          <input type="radio" name="comunicacao5" value="100" checked required> 
+          <label>100 pontos – Utiliza os dispositivos de forma autônoma.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao5" value="75"> 
+          <label>75 pontos – Utiliza com adaptações ou modificações necessárias.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao5" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="comunicacao5" value="25"> 
+          <label>25 pontos – Não utiliza os dispositivos sem auxílio.</label>
+        </div>
+      </div>
+    </fieldset>
+    
+    <!-- Domínio Mobilidade (10 atividades) -->
+    <fieldset>
+      <legend>Domínio Mobilidade (10 atividades)</legend>
+      
+      <div class="activity">
+        <p><strong>Atividade 1: Caminhar</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade1" value="100" checked required> 
+          <label>100 pontos – Caminha de forma independente, com segurança e velocidade habitual.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade1" value="75"> 
+          <label>75 pontos – Caminha com adaptações ou com ritmo reduzido.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade1" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial para caminhar.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade1" value="25"> 
+          <label>25 pontos – Não consegue caminhar sem total auxílio.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 2: Subir e descer escadas</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade2" value="100" checked required> 
+          <label>100 pontos – Sobe e desce escadas de forma independente e segura.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade2" value="75"> 
+          <label>75 pontos – Sobe e desce com adaptações ou com ritmo reduzido.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade2" value="50"> 
+          <label>50 pontos – Requer auxílio parcial para subir ou descer.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade2" value="25"> 
+          <label>25 pontos – Não consegue subir ou descer sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 3: Levantar-se de uma cadeira</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade3" value="100" checked required> 
+          <label>100 pontos – Levanta-se de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade3" value="75"> 
+          <label>75 pontos – Levanta-se com adaptações ou com alguma dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade3" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial para se levantar.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade3" value="25"> 
+          <label>25 pontos – Não se levanta sem total auxílio.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 4: Sair da cama</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade4" value="100" checked required> 
+          <label>100 pontos – Sai da cama de forma independente e segura.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade4" value="75"> 
+          <label>75 pontos – Sai com adaptações ou com dificuldade moderada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade4" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial para sair da cama.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade4" value="25"> 
+          <label>25 pontos – Não sai da cama sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 5: Sentar e levantar de uma cadeira</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade5" value="100" checked required> 
+          <label>100 pontos – Executa a ação de sentar e levantar de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade5" value="75"> 
+          <label>75 pontos – Executa com adaptações ou com alguma dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade5" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade5" value="25"> 
+          <label>25 pontos – Não executa sem total auxílio.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 6: Transferência (da cama para a cadeira)</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade6" value="100" checked required> 
+          <label>100 pontos – Realiza a transferência de forma independente e segura.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade6" value="75"> 
+          <label>75 pontos – Realiza com adaptações ou com alguma dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade6" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial (preparo ou supervisão).</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade6" value="25"> 
+          <label>25 pontos – Não realiza sem total auxílio.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 7: Equilíbrio e coordenação</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade7" value="100" checked required> 
+          <label>100 pontos – Mantém equilíbrio e coordenação de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade7" value="75"> 
+          <label>75 pontos – Mantém com adaptações ou com leve dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade7" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade7" value="25"> 
+          <label>25 pontos – Não mantém equilíbrio sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 8: Capacidade de correr</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade8" value="100" checked required> 
+          <label>100 pontos – Corre de forma independente, com segurança e velocidade habitual.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade8" value="75"> 
+          <label>75 pontos – Corre com adaptações ou com velocidade reduzida.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade8" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial para correr.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade8" value="25"> 
+          <label>25 pontos – Não corre sem total auxílio.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 9: Manutenção do equilíbrio ao caminhar</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade9" value="100" checked required> 
+          <label>100 pontos – Mantém o equilíbrio ao caminhar de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade9" value="75"> 
+          <label>75 pontos – Mantém com adaptações ou com alguma dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade9" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade9" value="25"> 
+          <label>25 pontos – Não mantém o equilíbrio sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 10: Capacidade de realizar movimentos rápidos</strong></p>
+        <div class="option">
+          <input type="radio" name="mobilidade10" value="100" checked required> 
+          <label>100 pontos – Realiza movimentos rápidos de forma independente e segura.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade10" value="75"> 
+          <label>75 pontos – Realiza com adaptações ou com leve dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade10" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="mobilidade10" value="25"> 
+          <label>25 pontos – Não realiza sem total auxílio.</label>
+        </div>
+      </div>
+    </fieldset>
+    
+    <!-- Domínio Cuidados Pessoais (5 atividades) -->
+    <fieldset>
+      <legend>Domínio Cuidados Pessoais (5 atividades)</legend>
+      
+      <div class="activity">
+        <p><strong>Atividade 1: Higiene pessoal</strong></p>
+        <div class="option">
+          <input type="radio" name="cuidados1" value="100" checked required> 
+          <label>100 pontos – Realiza a higiene pessoal de forma independente, sem auxílio.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados1" value="75"> 
+          <label>75 pontos – Realiza com adaptações ou modificações na rotina.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados1" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados1" value="25"> 
+          <label>25 pontos – Depende totalmente de terceiros.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 2: Vestir-se</strong></p>
+        <div class="option">
+          <input type="radio" name="cuidados2" value="100" checked required> 
+          <label>100 pontos – Veste-se de forma independente, sem adaptações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados2" value="75"> 
+          <label>75 pontos – Veste-se com adaptações ou de forma modificada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados2" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados2" value="25"> 
+          <label>25 pontos – Depende totalmente de terceiros.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 3: Alimentar-se</strong></p>
+        <div class="option">
+          <input type="radio" name="cuidados3" value="100" checked required> 
+          <label>100 pontos – Alimenta-se de forma independente, sem adaptações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados3" value="75"> 
+          <label>75 pontos – Alimenta-se com adaptações ou modificações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados3" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados3" value="25"> 
+          <label>25 pontos – Não se alimenta sozinho ou depende totalmente de terceiros.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 4: Uso do banheiro</strong></p>
+        <div class="option">
+          <input type="radio" name="cuidados4" value="100" checked required> 
+          <label>100 pontos – Utiliza o banheiro de forma independente e segura.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados4" value="75"> 
+          <label>75 pontos – Utiliza com adaptações ou modificações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados4" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados4" value="25"> 
+          <label>25 pontos – Depende totalmente de terceiros.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 5: Cuidado com a saúde (administração de medicamentos)</strong></p>
+        <div class="option">
+          <input type="radio" name="cuidados5" value="100" checked required> 
+          <label>100 pontos – Administra medicamentos de forma independente e segura.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados5" value="75"> 
+          <label>75 pontos – Administra com adaptações na dose ou forma de administração.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados5" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="cuidados5" value="25"> 
+          <label>25 pontos – Não administra sozinho ou depende totalmente.</label>
+        </div>
+      </div>
+    </fieldset>
+    
+    <!-- Domínio Vida Doméstica (5 atividades) -->
+    <fieldset>
+      <legend>Domínio Vida Doméstica (5 atividades)</legend>
+      
+      <div class="activity">
+        <p><strong>Atividade 1: Preparar refeições</strong></p>
+        <div class="option">
+          <input type="radio" name="domestica1" value="100" checked required> 
+          <label>100 pontos – Prepara refeições de forma independente, sem adaptações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica1" value="75"> 
+          <label>75 pontos – Prepara com adaptações ou modificações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica1" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica1" value="25"> 
+          <label>25 pontos – Não prepara sem total auxílio.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 2: Limpeza e organização da casa</strong></p>
+        <div class="option">
+          <input type="radio" name="domestica2" value="100" checked required> 
+          <label>100 pontos – Realiza a limpeza e organização de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica2" value="75"> 
+          <label>75 pontos – Realiza com adaptações ou modificações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica2" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica2" value="25"> 
+          <label>25 pontos – Não realiza sem total auxílio.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 3: Lavanderia</strong></p>
+        <div class="option">
+          <input type="radio" name="domestica3" value="100" checked required> 
+          <label>100 pontos – Lava e passa roupas de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica3" value="75"> 
+          <label>75 pontos – Realiza com adaptações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica3" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica3" value="25"> 
+          <label>25 pontos – Não realiza sem total auxílio.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 4: Cuidados com a roupa (lavar, passar)</strong></p>
+        <div class="option">
+          <input type="radio" name="domestica4" value="100" checked required> 
+          <label>100 pontos – Realiza o cuidado com a roupa de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica4" value="75"> 
+          <label>75 pontos – Realiza com adaptações necessárias.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica4" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica4" value="25"> 
+          <label>25 pontos – Depende totalmente de terceiros.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 5: Organização de tarefas domésticas</strong></p>
+        <div class="option">
+          <input type="radio" name="domestica5" value="100" checked required> 
+          <label>100 pontos – Organiza as tarefas domésticas de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica5" value="75"> 
+          <label>75 pontos – Organiza com adaptações ou modificações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica5" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="domestica5" value="25"> 
+          <label>25 pontos – Não organiza sem total auxílio.</label>
+        </div>
+      </div>
+    </fieldset>
+    
+    <!-- Domínio Educação, Trabalho e Vida Econômica (5 atividades) -->
+    <fieldset>
+      <legend>Domínio Educação, Trabalho e Vida Econômica (5 atividades)</legend>
+      
+      <div class="activity">
+        <p><strong>Atividade 1: Participação em atividades educacionais</strong></p>
+        <div class="option">
+          <input type="radio" name="economica1" value="100" checked required> 
+          <label>100 pontos – Participa de atividades educacionais de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica1" value="75"> 
+          <label>75 pontos – Participa com adaptações ou modificações.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica1" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica1" value="25"> 
+          <label>25 pontos – Não participa sozinho.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 2: Realização de tarefas laborais</strong></p>
+        <div class="option">
+          <input type="radio" name="economica2" value="100" checked required> 
+          <label>100 pontos – Executa tarefas laborais de forma independente e eficaz.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica2" value="75"> 
+          <label>75 pontos – Executa com adaptações ou com alguma dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica2" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica2" value="25"> 
+          <label>25 pontos – Não executa sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 3: Gestão financeira pessoal</strong></p>
+        <div class="option">
+          <input type="radio" name="economica3" value="100" checked required> 
+          <label>100 pontos – Gerencia as finanças de forma independente e segura.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica3" value="75"> 
+          <label>75 pontos – Gerencia com adaptações ou com dificuldade moderada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica3" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica3" value="25"> 
+          <label>25 pontos – Não gerencia sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 4: Uso de tecnologia no trabalho</strong></p>
+        <div class="option">
+          <input type="radio" name="economica4" value="100" checked required> 
+          <label>100 pontos – Utiliza tecnologia de forma independente e eficaz.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica4" value="75"> 
+          <label>75 pontos – Utiliza com adaptações ou modificações necessárias.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica4" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica4" value="25"> 
+          <label>25 pontos – Não utiliza de forma autônoma.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 5: Planejar e organizar atividades econômicas</strong></p>
+        <div class="option">
+          <input type="radio" name="economica5" value="100" checked required> 
+          <label>100 pontos – Planeja e organiza de forma independente e eficaz.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica5" value="75"> 
+          <label>75 pontos – Planeja com adaptações ou dificuldades moderadas.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica5" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="economica5" value="25"> 
+          <label>25 pontos – Não organiza sem auxílio total.</label>
+        </div>
+      </div>
+    </fieldset>
+    
+    <!-- Domínio Socialização e Vida Comunitária (6 atividades) -->
+    <fieldset>
+      <legend>Domínio Socialização e Vida Comunitária (6 atividades)</legend>
+      
+      <div class="activity">
+        <p><strong>Atividade 1: Participação em atividades sociais</strong></p>
+        <div class="option">
+          <input type="radio" name="social1" value="100" checked required> 
+          <label>100 pontos – Participa de forma independente, sem restrições.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social1" value="75"> 
+          <label>75 pontos – Participa com adaptações ou com leve dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social1" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social1" value="25"> 
+          <label>25 pontos – Não participa sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 2: Interação com familiares</strong></p>
+        <div class="option">
+          <input type="radio" name="social2" value="100" checked required> 
+          <label>100 pontos – Interage de forma autônoma e saudável.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social2" value="75"> 
+          <label>75 pontos – Interage com adaptações ou com leve dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social2" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social2" value="25"> 
+          <label>25 pontos – Não interage sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 3: Participação em eventos comunitários</strong></p>
+        <div class="option">
+          <input type="radio" name="social3" value="100" checked required> 
+          <label>100 pontos – Participa de eventos comunitários de forma independente.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social3" value="75"> 
+          <label>75 pontos – Participa com adaptações ou com alguma dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social3" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social3" value="25"> 
+          <label>25 pontos – Não participa sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 4: Participação em atividades religiosas</strong></p>
+        <div class="option">
+          <input type="radio" name="social4" value="100" checked required> 
+          <label>100 pontos – Participa de forma autônoma em atividades religiosas.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social4" value="75"> 
+          <label>75 pontos – Participa com adaptações ou com dificuldade moderada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social4" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social4" value="25"> 
+          <label>25 pontos – Não participa sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 5: Engajamento em atividades de voluntariado</strong></p>
+        <div class="option">
+          <input type="radio" name="social5" value="100" checked required> 
+          <label>100 pontos – Engaja-se de forma independente em atividades de voluntariado.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social5" value="75"> 
+          <label>75 pontos – Engaja-se com adaptações ou com alguma dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social5" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social5" value="25"> 
+          <label>25 pontos – Não se engaja sem auxílio total.</label>
+        </div>
+      </div>
+      
+      <div class="activity">
+        <p><strong>Atividade 6: Manutenção de relações interpessoais</strong></p>
+        <div class="option">
+          <input type="radio" name="social6" value="100" checked required> 
+          <label>100 pontos – Mantém relações interpessoais de forma autônoma e equilibrada.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social6" value="75"> 
+          <label>75 pontos – Mantém relações com adaptações ou com leve dificuldade.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social6" value="50"> 
+          <label>50 pontos – Necessita de auxílio parcial.</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="social6" value="25"> 
+          <label>25 pontos – Não mantém relações sem total auxílio.</label>
+        </div>
+      </div>
+    </fieldset>
+    
+    <button type="submit">Calcular Pontuação IF‑BrA</button>
+  </form>
+
+  <div id="resultado" class="result"></div>
+
+  <script>
+    // Ao submeter o formulário, o script soma os valores dos radio buttons selecionados.
+    // Como há 41 atividades e cada atividade é avaliada por dois aplicadores,
+    // o total bruto varia de 41 x 25 = 1025 (mínimo) a 41 x 100 = 4100 (máximo).
+    // Em seguida, esse total é multiplicado por 2 para representar a avaliação conjunta.
+    // Portanto, a pontuação total varia de 2050 a 8200 pontos.
+    // A classificação segue os intervalos:
+    //    ≤ 5739: Deficiência Grave
+    //    5740 a 6354: Deficiência Moderada
+    //    6355 a 7584: Deficiência Leve
+    //    ≥ 7585: Pontuação Insuficiente para Concessão do Benefício
+    document.getElementById('ifbraForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let rawTotal = 0;
+      const formElements = event.target.elements;
+      
+      // Percorre todos os inputs para somar as pontuações dos radio buttons selecionados.
+      for (let i = 0; i < formElements.length; i++) {
+        const el = formElements[i];
+        if (el.type === 'radio' && el.checked) {
+          rawTotal += parseInt(el.value);
+        }
+      }
+      
+      // Multiplica o total bruto por 2 (por dois aplicadores)
+      const totalAplicadores = rawTotal * 2;
+      
+      let classificacao = '';
+      if (totalAplicadores <= 5739) {
+        classificacao = 'Deficiência Grave';
+      } else if (totalAplicadores >= 5740 && totalAplicadores <= 6354) {
+        classificacao = 'Deficiência Moderada';
+      } else if (totalAplicadores >= 6355 && totalAplicadores <= 7584) {
+        classificacao = 'Deficiência Leve';
+      } else if (totalAplicadores >= 7585) {
+        classificacao = 'Pontuação Insuficiente para Concessão do Benefício';
+      } else {
+        classificacao = 'Não classificado';
+      }
+      
+      document.getElementById('resultado').innerHTML =
+        `<p><strong>Pontuação Total:</strong> ${totalAplicadores}</p>
+         <p><strong>Classificação:</strong> ${classificacao}</p>`;
+    });
+  </script>
+</body>
+</html>
