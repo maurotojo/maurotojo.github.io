@@ -11,7 +11,11 @@
       h1 {
         font-size: 24px;
       }
-      label, p, ul, button, select {
+      label,
+      p,
+      ul,
+      button,
+      select {
         font-size: 16px;
       }
       #resultados {
@@ -31,14 +35,6 @@
         border: 0px solid #ccc;
       }
     </style>
-    <!-- Atualize para a versão mais recente do EmailJS -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-      // Inicializa o EmailJS com a sua public key
-      (function () {
-        emailjs.init("C2DRE-YgRPvnH--YM");
-      })();
-    </script>
   </head>
   <body>
     <h1>Questionário de ansiedade, depressão e estresse DASS-21</h1>
@@ -248,16 +244,52 @@
     </form>
     <br />
     <div id="resultados"></div>
-    <script>
-      // Variável para armazenar os scores calculados
-      var globalScores = null;
+    <p>Classificação:</p>
+    <ul>
+      <li>
+        Depressão:
+        <ul>
+          <li>Normal: 0-9</li>
+          <li>Leve: 10-12</li>
+          <li>Moderado: 13-20</li>
+          <li>Severo: 21-27</li>
+          <li>Extremamente Severo: 28-42</li>
+        </ul>
+      </li>
+      <li>
+        Ansiedade:
+        <ul>
+          <li>Normal: 0-6</li>
+          <li>Leve: 7-9</li>
+          <li>Moderado: 10-14</li>
+          <li>Severo: 15-19</li>
+          <li>Extremamente Severo: 20-42</li>
+        </ul>
+      </li>
+      <li>
+        Estresse:
+        <ul>
+          <li>Normal: 0-10</li>
+          <li>Leve: 11-18</li>
+          <li>Moderado: 19-26</li>
+          <li>Severo: 27-34</li>
+          <li>Extremamente Severo: 35-42</li>
+        </ul>
+      </li>
+    </ul>
 
+    <!-- Scripts colocados ao final do body -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+      // Inicializa o EmailJS com a sua public key
+      emailjs.init("C2DRE-YgRPvnH--YM");
+
+      var globalScores = null;
       function calcularScores() {
         const form = document.forms["dassForm"];
         let depressao = 0,
           ansiedade = 0,
           estresse = 0;
-
         // Calcular Depressão
         depressao += parseInt(form["q3"].value);
         depressao += parseInt(form["q5"].value);
@@ -266,7 +298,6 @@
         depressao += parseInt(form["q16"].value);
         depressao += parseInt(form["q17"].value);
         depressao += parseInt(form["q21"].value);
-
         // Calcular Ansiedade
         ansiedade += parseInt(form["q2"].value);
         ansiedade += parseInt(form["q4"].value);
@@ -275,7 +306,52 @@
         ansiedade += parseInt(form["q15"].value);
         ansiedade += parseInt(form["q19"].value);
         ansiedade += parseInt(form["q20"].value);
-
         // Calcular Estresse
         estresse += parseInt(form["q1"].value);
-        estresse += pa
+        estresse += parseInt(form["q6"].value);
+        estresse += parseInt(form["q8"].value);
+        estresse += parseInt(form["q11"].value);
+        estresse += parseInt(form["q12"].value);
+        estresse += parseInt(form["q14"].value);
+        estresse += parseInt(form["q18"].value);
+        // Multiplicar os scores por 2 para ajustar para DASS-42
+        depressao *= 2;
+        ansiedade *= 2;
+        estresse *= 2;
+        // Armazenar os scores na variável global
+        globalScores = { depressao, ansiedade, estresse };
+        // Exibir os resultados
+        document.getElementById("resultados").innerHTML =
+          "Score de Depressão: " +
+          depressao +
+          ", Ansiedade: " +
+          ansiedade +
+          ", Estresse: " +
+          estresse;
+      }
+
+      function enviarEmail() {
+        if (!globalScores) {
+          alert("Por favor, calcule a pontuação antes de enviar o email.");
+          return;
+        }
+        var templateParams = {
+          depressao: globalScores.depressao,
+          ansiedade: globalScores.ansiedade,
+          estresse: globalScores.estresse,
+          to_email: "drmaurotojo@gmail.com"
+        };
+        emailjs
+          .send("service_drmauro", "template_drmauro", templateParams)
+          .then(
+            function (response) {
+              alert("Email enviado com sucesso!");
+            },
+            function (error) {
+              alert("Falha ao enviar email: " + JSON.stringify(error));
+            }
+          );
+      }
+    </script>
+  </body>
+</html>
